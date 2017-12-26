@@ -16,6 +16,7 @@ hammertime.on('swipeleft swiperight', function(ev) {
     if (Math.abs(goTo) + parentWidth > wrapperWidth) {
         goTo = parentWidth - wrapperWidth;
     }
+
     dom.wrapper.style.left = `${goTo}px`;
     dom.status.innerHTML = ev.type;
 });
