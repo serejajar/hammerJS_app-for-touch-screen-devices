@@ -8,50 +8,78 @@
                 width: 100%;
                 overflow: hidden;
             }
+            .swipe-elem {
+                width: 500px;
+                overflow: hidden;
+                margin: auto;
+            }
             .wrapper {
                 display: flex;
+                position: relative;
                 height: 100%;
                 left: 0px;
                 width: 2000px;
-                background-color: #2f74ff;
+                background-color: #f6ff83;
+                transition-property: left;
+                transition-duration: 2s;
             }
             .wrapper > div {
                 width: 90px;
                 height: 190px;
-                background-color: #f1f1f1;
                 margin: 5px;
+                border-radius: 5px;
+                text-align: center;
+                font-size: 50px;
+                line-height: 100px;
+            }
+            .wrapper > div:nth-child(even) {
+                background-color: #23c8c6;
+            }
+            .wrapper > div:nth-child(odd) {
+                background-color: #a0e38d;
+            }
+            .status-elem {
+                position: absolute;
+                bottom: 0px;
+                right: 0px;
+                padding: 20px;
+                background-color: #40cd98;
+                width: 200px;
+                border-radius: 5px 0 0 0;
             }
         </style>
         <script type="text/javascript" src="js/hammer.min.js" defer></script>
         <script type="text/javascript" src="js/main.js" defer></script>
     </head>
     <body>
-        <div id="wrap" class="wrapper">
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
+        <div class="swipe-elem">
+            <div id="wrap" class="wrapper">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
 
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
+                <div>11</div>
+                <div>12</div>
+                <div>13</div>
+                <div>14</div>
+                <div>15</div>
+                <div>16</div>
+                <div>17</div>
+                <div>18</div>
+                <div>19</div>
+                <div>20</div>
+            </div>
         </div>
 
-        <div id="status">
-
+        <div class="status-elem">
+            Event type: <span id="status">none</span>
         </div>
 
     </body>
